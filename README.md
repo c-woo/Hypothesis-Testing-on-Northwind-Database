@@ -18,6 +18,8 @@ The following four questions were used to conduct hypothesis tests on the databa
 
 <img src='https://i.imgur.com/5FMZ7EQ.png'>
 
+<img src='https://i.imgur.com/ok7rOTZ.png'>
+
 <img src='https://i.imgur.com/pWlKPMC.png'>
 
 <img src='https://i.imgur.com/OIyFL8G.png'>
