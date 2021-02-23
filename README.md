@@ -1,34 +1,50 @@
 
-# Hypothesis Testing on Northwind Database
+# Predicting Customer Churn for SyriaTel
 
-For this project, I was given the Northwind database to generate valuable analytical insights that could be of value to the company. The Northwind database is a sample database created by Microsoft for a fictitious company called Northwind Traders which imports and exports consumables around the world. Here is the schema for the database.
+For a business, the cost of acquiring new customers is typically high when compared to retaining existing customers. Because of this, managing customer churn is an essential requirement of a successful business. Customer churn is the percentage of customers that stopped using your company’s product or service during a ceratin time frame. Of course retaining all your customers is an impossible task, however, being able to predict which customers might leave in the future gives businesses valuable insights into their customers and their business.
 
-<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-3-project/master/Northwind_ERD_updated.png'>
+We’ll be looking at data from SyriaTel, a telecommunications company, to try and predict whether or not a customer will churn.
 
-The following four questions were used to conduct hypothesis tests on the database:
+## Models used for predictions
 
-> 1. Does discount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?
-> 2. Does discount amount have a statistically significant effect on the average revenue made per product?
-> 3. Does region have a statistically significant effect on the average amount spent in an order?
-> 4. How does discount affect quantity ordered in different regions?
+I'll be running the data through a couple different models to see which one yields the best results. The models I'll be using are:
+*Logistic Regression
+*Random Forest
+*XGBoost
 
-## Visualizations
+## Logistic Regression
 
-<img src='https://i.imgur.com/OiyN6AS.png'>
+### Evaluation Metrics
 
-<img src='https://i.imgur.com/5FMZ7EQ.png'>
+Precision:  0.4
+Recall:  0.784
+Accuracy:  0.7913669064748201
+F1-Score:  0.5297297297297298
 
-<img src='https://i.imgur.com/ok7rOTZ.png'>
+<img src='https://i.imgur.com/Mc8IK0l.png'>
 
-<img src='https://i.imgur.com/pWlKPMC.png'>
+## Random Forest
 
-<img src='https://i.imgur.com/OIyFL8G.png'>
+### Evaluation Metrics
 
-## Conclusions
+Precision:  0.8290598290598291
+Recall:  0.776
+Accuracy:  0.9424460431654677
+F1-Score:  0.8016528925619835
 
-* Discount does have a statistically significant effect on quantity of a product and the most effective discount levels to use are 5%, 15%, and 25%
-* Only the discount level of 5% has a statistically significant effect on average revenue, all other discount levels revenue do not significantly differ from having no discount
-* Western Europe and North America spend the most money per order
-* Southern and Eastern Europe and Central and South America spend the least money per order
-* Discount is the most effective for quantity sold in the British Isles
-* Discount is the least effective for quantity sold in Central and South America
+<img src='https://i.imgur.com/npww6GT.png'>
+
+## XGBoost
+
+### Evaluation Metrics
+
+Precision:  0.8166666666666667
+Recall:  0.784
+Accuracy:  0.9412470023980816
+F1-Score:  0.7999999999999999
+
+<img src='https://i.imgur.com/dQDjFoe.png'>
+
+## Conclusion
+
+After running the data through all three models, XGBoost was found to be the best model for predicting customer churn. Although XGBoost and Random Forest have similar evaluation metrics, Random Forest had some overfitting to the training data which is why XGBoost is the better model to use.
